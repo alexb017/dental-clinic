@@ -12,7 +12,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full max-w-[1080px] top-4 bg-zinc-100 rounded-full px-3 py-3 pl-6">
+    <nav className="fixed w-full max-w-[1080px] top-4 bg-zinc-50/[.5] rounded-full px-3 py-3 pl-6 shadow-2xl backdrop-blur-lg">
       <div className="flex items-center justify-between h-full">
         <div className="flex">
           <svg
@@ -76,7 +76,7 @@ export default function Navbar() {
             <Link
               key={`${href}${label}`}
               href={href}
-              className="font-medium text-black py-2 px-4 rounded-xl hover:bg-zinc-200 transition-colors"
+              className="font-medium text-black py-2 px-4 rounded-xl hover:bg-zinc-50 transition-colors"
             >
               {label}
             </Link>
