@@ -2,6 +2,7 @@ import Navbar from '@/components/navbar';
 import Header from '@/components/header';
 import Services from '@/components/services';
 import Pricing from '@/components/pricing';
+import About from '@/components/about';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Services />
       <Pricing />
+      <About />
     </main>
   );
 }
