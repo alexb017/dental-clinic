@@ -84,7 +84,9 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-5">
           <p className="text-zinc-500 font-medium">072 584 4799</p>
-          <Button className="text-base rounded-full">Book a call</Button>
+          <Button className="text-base rounded-full bg-zinc-800">
+            Book a call
+          </Button>
         </div>
       </div>
     </nav>
