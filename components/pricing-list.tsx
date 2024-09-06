@@ -23,7 +23,7 @@ export default function PricingList() {
         Our pricing is transparent <br></br>{' '}
         <span className="text-zinc-500">and easy to understand.</span>
       </h2>
-      <Table>
+      <Table className="bg-white">
         {/* <TableHeader>
                 <TableRow>
                   <TableHead>A list of our services</TableHead>

@@ -86,3 +86,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-content {
+  display: flex;
+  animation: slide 60s linear infinite;
+}

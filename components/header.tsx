@@ -6,7 +6,8 @@ export default function Header() {
         style={{
           width: 'calc(100vw - 180px)',
           height: 'calc(100vh - 180px)',
-          backgroundImage: 'url(/images/close-up-dentist-instruments-4.jpg)',
+          backgroundImage:
+            'url(/images/close-up-dentist-instruments-large.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
