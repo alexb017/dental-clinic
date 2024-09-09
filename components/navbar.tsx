@@ -12,7 +12,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed z-10 w-full max-w-[1080px] top-4 px-5">
+    <nav className="fixed z-50 w-full max-w-[1080px] top-4 px-5">
       <div className="flex items-center justify-between h-full bg-zinc-50/[.5] rounded-full px-3 py-3 pl-6 shadow-2xl backdrop-blur-lg">
         <div className="flex">
           <svg
