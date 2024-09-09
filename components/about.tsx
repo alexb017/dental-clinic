@@ -2,7 +2,10 @@ import CarouselItems from './carousel-items';
 
 export default function About() {
   return (
-    <section className="flex flex-col gap-12 max-w-[1080px] w-full px-5">
+    <section
+      id="about"
+      className="flex flex-col gap-12 max-w-[1080px] w-full px-5"
+    >
       <div className="flex flex-row justify-between px-8">
         <h1 className="scroll-m-20 text-4xl font-semibold tracking-tighter lg:text-5xl">
           About <br></br>

@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from './ui/button';
 import Link from 'next/link';
 
@@ -6,10 +8,36 @@ export default function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
     { href: '/pricing', label: 'Pricing' },
-    { href: '/about', label: 'About Us' },
-    { href: '/reviews', label: 'Reviews' },
-    { href: '/contact', label: 'Contact' },
+    {
+      href: '#',
+      label: 'About Us',
+      id: 'about',
+      onClick: () => scrollToSection('about'),
+    },
+    {
+      href: '#',
+      label: 'Reviews',
+      id: 'reviews',
+      onClick: () => scrollToSection('reviews'),
+    },
+    {
+      href: '#',
+      label: 'Contact',
+      id: 'contact',
+      onClick: () => scrollToSection('contact'),
+    },
   ];
+
+  function scrollToSection(id: string | undefined) {
+    // Typescript can narrow down the type of id to string
+    if (typeof id === 'string') {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // If id is undefined, do nothing
+    return;
+  }
 
   return (
     <nav className="fixed z-50 w-full max-w-[1080px] top-4 px-5">
@@ -72,13 +100,21 @@ export default function Navbar() {
           </svg>
         </div>
         <div className="flex items-center">
-          {links.map(({ href, label }) => (
+          {links.map((link) => (
             <Link
-              key={`${href}${label}`}
-              href={href}
+              key={`${link.href}${link.label}`}
+              href={link.href}
+              onClick={
+                link.href === '#'
+                  ? (e) => {
+                      e.preventDefault();
+                      scrollToSection(link.id);
+                    }
+                  : undefined
+              }
               className="font-medium text-black py-2 px-4 rounded-xl hover:bg-zinc-50 transition-colors"
             >
-              {label}
+              {link.label}
             </Link>
           ))}
         </div>
