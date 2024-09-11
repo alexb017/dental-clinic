@@ -1,3 +1,5 @@
+import ContactInfo from '@/components/contact-info';
+
 export default function Contact() {
   return (
     <section
@@ -9,6 +11,7 @@ export default function Contact() {
           Get in touch <br></br> <span className="text-zinc-500">with us.</span>
         </h1>
       </div>
+      <ContactInfo />
     </section>
   );
 }
