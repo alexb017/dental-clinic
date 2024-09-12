@@ -1,4 +1,5 @@
 import ContactInfo from '@/components/contact-info';
+import ContactMap from '@/components/contact-map';
 
 export default function Contact() {
   return (
@@ -11,7 +12,10 @@ export default function Contact() {
           Get in touch <br></br> <span className="text-zinc-500">with us.</span>
         </h1>
       </div>
-      <ContactInfo />
+      <div className="flex gap-5">
+        <ContactInfo />
+        <ContactMap />
+      </div>
     </section>
   );
 }
