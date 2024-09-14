@@ -1,6 +1,6 @@
 import { reviews } from '@/lib/placeholder-data';
 import Image from 'next/image';
-import { BadgeCheck } from 'lucide-react';
+import { CheckBadgeIcon } from '@heroicons/react/24/solid';
 
 type Review = {
   name: string;
@@ -17,8 +17,10 @@ export default function ReviewsList() {
   const second = data.slice(3, 6);
   const third = data.slice(6, 9);
 
+  const before = `before:content-[''] before:absolute before:inset-0 before:z-[1] before:bg-gradient-to-t before:from-zinc-100 before:to-transparent before:via-transparent before:from-0% before:via-25% before:to-50%`;
+
   return (
-    <section className="flex gap-5">
+    <section className={`relative flex gap-5 ${before}`}>
       <div className="flex flex-col gap-5 w-full">
         {first.map((review) => (
           <div
@@ -30,6 +32,7 @@ export default function ReviewsList() {
                 <Image
                   src={review.avatar}
                   alt={review.name}
+                  sizes="44px 44px"
                   fill
                   className="rounded-full object-cover"
                 />
@@ -39,7 +42,7 @@ export default function ReviewsList() {
                   <h4 className="text-xl font-semibold tracking-tighter leading-none">
                     {review.name}
                   </h4>
-                  <BadgeCheck className="h-5 w-5 text-sky-500" />
+                  <CheckBadgeIcon className="h-5 w-5 text-sky-500" />
                 </div>
                 <small className="text-sm text-zinc-500 font-medium leading-none">
                   @{review.nickname}
@@ -63,6 +66,7 @@ export default function ReviewsList() {
                 <Image
                   src={review.avatar}
                   alt={review.name}
+                  sizes="44px 44px"
                   fill
                   className="rounded-full object-cover"
                 />
@@ -72,7 +76,7 @@ export default function ReviewsList() {
                   <h4 className="text-xl font-semibold tracking-tighter leading-none">
                     {review.name}
                   </h4>
-                  <BadgeCheck className="h-5 w-5 text-sky-500" />
+                  <CheckBadgeIcon className="h-5 w-5 text-sky-500" />
                 </div>
                 <small className="text-sm text-zinc-500 font-medium leading-none">
                   @{review.nickname}
@@ -96,6 +100,7 @@ export default function ReviewsList() {
                 <Image
                   src={review.avatar}
                   alt={review.name}
+                  sizes="44px 44px"
                   fill
                   className="rounded-full object-cover"
                 />
@@ -105,7 +110,7 @@ export default function ReviewsList() {
                   <h4 className="text-xl font-semibold tracking-tighter leading-none">
                     {review.name}
                   </h4>
-                  <BadgeCheck className="h-5 w-5 text-sky-500" />
+                  <CheckBadgeIcon className="h-5 w-5 text-sky-500" />
                 </div>
                 <small className="text-sm text-zinc-500 font-medium leading-none">
                   @{review.nickname}
