@@ -1,52 +1,58 @@
-import { Send, PhoneCall, MapPin } from 'lucide-react';
+import {
+  PaperAirplaneIcon,
+  PhoneArrowUpRightIcon,
+  MapPinIcon,
+} from '@heroicons/react/24/outline';
+import FacebookIcon from './icons/facebook';
+import ContactForm from './contact-form';
 
 export default function ContactInfo() {
   return (
     <section className="bg-white rounded-3xl w-1/2 p-8">
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-            Chat with us
-          </h4>
-          <p className="text-zinc-500">
-            We are available 24/7 to answer your questions and help you with
-            your dental needs.
-          </p>
-          <div className="flex items-center gap-2">
-            <Send className="h-5 w-5 inline-block text-zinc-500" />
-            <a className="font-semibold" href="mailto:dentalclinic@gmail.com">
-              Shoot us an email
-            </a>
+        <div className="flex flex-col gap-4">
+          <h2 className="text-3xl font-semibold tracking-tight">
+            We are here to help. <br></br>{' '}
+            <span className="text-zinc-500">
+              Get in touch with us for any inquiries.
+            </span>
+          </h2>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2 group">
+              <PaperAirplaneIcon className="h-6 group-hover:text-zinc-500 transition-colors" />
+              <a
+                className="font-semibold group-hover:text-zinc-500 transition-colors"
+                href="#"
+              >
+                Send us an email
+              </a>
+            </div>
+            <div className="flex items-center gap-2 group">
+              <FacebookIcon className="h-5 group-hover:text-zinc-500 transition-colors" />
+              <a
+                className="font-semibold group-hover:text-zinc-500 transition-colors"
+                href="#"
+              >
+                Message us on Facebook
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <PhoneArrowUpRightIcon className="h-5" />
+              <p className="font-semibold">+123 456 7890</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPinIcon className="h-5" />
+              <p className="font-semibold">
+                1234 Street Name, City Name, Country
+              </p>
+            </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2">
-          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-            Call us
-          </h4>
-          <p className="text-zinc-500">
-            Call out team to book an appointment or ask any questions.
-          </p>
-          <div className="flex items-center gap-2">
-            <PhoneCall className="h-5 w-5 inline-block text-zinc-500" />
-            <a className="font-semibold" href="tel:+1234567890">
-              +123 456 7890
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col gap-2">
-          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-            Visit us
-          </h4>
-          <p className="text-zinc-500">
-            We are located in the heart of the city. Visit us anytime during
-            working hours.
-          </p>
-          <div className="flex items-center gap-2">
-            <MapPin className="h-5 w-5 inline-block text-zinc-500" />
-            <a className="font-semibold" href="tel:+1234567890">
-              1234 Street Name, City Name, Country
-            </a>
-          </div>
+        <div className="flex flex-col gap-4">
+          <h2 className="text-3xl font-semibold tracking-tight">
+            Make an <br></br> <span className="text-zinc-500">appointment</span>
+          </h2>
+          <ContactForm />
         </div>
       </div>
     </section>

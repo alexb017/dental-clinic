@@ -12,10 +12,13 @@ export default function ContactMap() {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current!,
-      style: 'mapbox://styles/mapbox/dark-v11',
+      style: 'mapbox://styles/mapbox/standard',
       center: [-74.006, 40.7128],
       zoom: 9,
     });
+
+    // Add navigation control (the +/- zoom buttons)
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 
     // Create a default Marker and add it to the map
     const marker = new mapboxgl.Marker()
