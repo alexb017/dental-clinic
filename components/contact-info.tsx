@@ -3,7 +3,7 @@ import {
   PhoneArrowUpRightIcon,
   MapPinIcon,
 } from '@heroicons/react/24/outline';
-import FacebookIcon from './icons/facebook';
+import FacebookOutlineIcon from './icons/facebook-outline';
 import ContactForm from './contact-form';
 
 export default function ContactInfo() {
@@ -28,7 +28,7 @@ export default function ContactInfo() {
               </a>
             </div>
             <div className="flex items-center gap-2 group">
-              <FacebookIcon className="h-5 group-hover:text-zinc-500 transition-colors" />
+              <FacebookOutlineIcon className="h-5 group-hover:text-zinc-500 transition-colors" />
               <a
                 className="font-semibold group-hover:text-zinc-500 transition-colors"
                 href="#"

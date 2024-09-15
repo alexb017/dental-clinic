@@ -1,4 +1,8 @@
-export default function FacebookIcon({ className }: { className?: string }) {
+export default function FacebookOutlineIcon({
+  className,
+}: {
+  className?: string;
+}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
