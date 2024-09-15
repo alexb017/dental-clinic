@@ -8,14 +8,10 @@ import {
   TableRow,
 } from './ui/table';
 import { pricing } from '@/lib/placeholder-data';
-
-type Pricing = {
-  label: string;
-  price: number;
-};
+import { Pricing } from '@/lib/types';
 
 export default function PricingList() {
-  const data = pricing as Pricing[];
+  const data: Pricing[] = pricing;
 
   return (
     <div className="flex flex-col gap-5 rounded-3xl bg-white w-full p-8">

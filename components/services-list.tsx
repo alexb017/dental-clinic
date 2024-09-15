@@ -5,15 +5,12 @@ import {
   AccordionContent,
 } from './ui/accordion';
 import { services } from '@/lib/placeholder-data';
-
-type Service = {
-  label: string;
-  content: string;
-};
+import { Service } from '@/lib/types';
 
 export default function ServicesList() {
-  const data = services as Service[];
+  const data: Service[] = services;
 
+  // Splitting the data into two columns
   const firstFourElements = data.slice(0, 4);
   const nextFourElements = data.slice(4, 8);
 

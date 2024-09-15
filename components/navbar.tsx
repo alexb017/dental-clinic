@@ -2,11 +2,7 @@ import LogoIcon from './icons/logo';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { links } from '@/lib/placeholder-data';
-
-type Links = {
-  label: string;
-  href: string;
-};
+import { Links } from '@/lib/types';
 
 export default function Navbar() {
   const data: Links[] = links;

@@ -1,22 +1,17 @@
 import { reviews } from '@/lib/placeholder-data';
 import Image from 'next/image';
 import { CheckBadgeIcon } from '@heroicons/react/24/solid';
-
-type Review = {
-  name: string;
-  nickname: string;
-  avatar: string;
-  review: string;
-};
+import { Review } from '@/lib/types';
 
 export default function ReviewsList() {
-  const data = reviews as Review[];
+  const data: Review[] = reviews;
 
-  // break the data into 3 parts
+  // Splitting the data into three columns for a better layout
   const first = data.slice(0, 3);
   const second = data.slice(3, 6);
   const third = data.slice(6, 9);
 
+  // Add a gradient background to the section
   const before = `before:content-[''] before:absolute before:inset-0 before:z-[1] before:bg-gradient-to-t before:from-zinc-100 before:to-transparent before:via-transparent before:from-0% before:via-25% before:to-50%`;
 
   return (

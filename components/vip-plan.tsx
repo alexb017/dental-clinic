@@ -1,18 +1,10 @@
 import { Button } from './ui/button';
 import { vipPlan } from '@/lib/placeholder-data';
-
-type VipPlan = {
-  period: string;
-  periodType: string;
-  label: string;
-  labelContent: string;
-  price: number;
-  content: string;
-  discount: string;
-};
+import { VipPlanType } from '@/lib/types';
 
 export default function VipPlan() {
-  const data = vipPlan as VipPlan[];
+  const data: VipPlanType[] = vipPlan;
+
   return (
     <section className="w-full p-8 rounded-3xl bg-zinc-800">
       {data.map((plan) => (

@@ -7,17 +7,15 @@ import {
   CarouselNext,
 } from './ui/carousel';
 import { images } from '@/lib/placeholder-data';
-
-type Image = {
-  alt: string;
-  url: string;
-};
+import { ImageType } from '@/lib/types';
 
 export default function CarouselItems() {
-  const data = images as Image[];
+  const data: ImageType[] = images;
 
+  // Duplicating the data to create a carousel effect
   const carouselImages = [...data, ...data, ...data];
 
+  // Adding a gradient effect to the carousel
   const before = `before:content-[''] before:absolute before:inset-0 before:z-[1] before:bg-gradient-to-r before:from-zinc-100 before:to-transparent before:via-transparent before:from-0% before:via-25% before:to-50%`;
 
   return (
