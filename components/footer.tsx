@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import Link from 'next/link';
 import { links } from '@/lib/placeholder-data';
 import { Links } from '@/lib/types';
+import LogoName from './logo-name';
 
 export default function Footer() {
   const data: Links[] = links;
@@ -15,12 +16,7 @@ export default function Footer() {
         <div className="flex flex-col gap-8">
           <div className="flex justify-between">
             <div className="flex flex-col gap-8">
-              <div className="flex items-center gap-3">
-                <LogoIcon className="w-8 h-8" />
-                <h3 className="text-2xl font-semibold tracking-tight">
-                  Dental Clinic
-                </h3>
-              </div>
+              <LogoName />
               <div className="flex flex-col gap-2">
                 <a href="#">dentalclinic@gmail.com</a>
                 <a href="#">+123 456 7890</a>

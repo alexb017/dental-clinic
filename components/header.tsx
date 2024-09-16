@@ -2,23 +2,21 @@ export default function Header() {
   return (
     <header className="flex flex-col items-center justify-center w-full">
       <div
-        className="bg-zinc-100 rounded-b-3xl"
+        className="flex justify-center items-end pb-8 bg-zinc-100 rounded-3xl"
         style={{
-          width: 'calc(100vw - 180px)',
-          height: 'calc(100vh - 180px)',
+          width: 'calc(1280px - 40px)',
+          height: '500px',
           backgroundImage:
             'url(/images/close-up-dentist-instruments-large.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          marginTop: '56px',
         }}
       ></div>
-      <div className="flex items-center flex-col max-w-[1080px] p-8">
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tighter lg:text-8xl">
-          Dental Clinic
-        </h1>
-        <h3 className="scroll-m-20 text-2xl font-medium tracking-tight text-zinc-500">
+      <div className="max-w-[1080px] pt-8">
+        <h1 className="text-4xl text-orange-500 text-center font-extrabold tracking-tighter xl:text-6xl">
           We understand the importance of dental care and oral hygiene.
-        </h3>
+        </h1>
       </div>
     </header>
   );
