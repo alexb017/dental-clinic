@@ -42,7 +42,7 @@ export default function Footer() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="font-medium text-black hover:text-zinc-500 transition-colors"
+                    className="font-medium hover:text-orange-500 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -53,7 +53,7 @@ export default function Footer() {
                   We understand the importance of dental care and oral hygiene.
                 </h4>
                 <div className="flex gap-2">
-                  <Button className="text-base rounded-full bg-zinc-800">
+                  <Button className="text-base rounded-full">
                     Book a call
                   </Button>
                   <Button className="text-base rounded-full text-black border bg-transparent hover:bg-zinc-50">
@@ -69,9 +69,18 @@ export default function Footer() {
                 <p>&copy; 2024 Dental Clinic Inc. All rights reserved.</p>
               </div>
               <div className="flex gap-5">
-                <a href="#">Credits</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy Policy</a>
+                <Link
+                  href="/credits"
+                  className="hover:text-zinc-500 transition-colors"
+                >
+                  Credits
+                </Link>
+                <a href="#" className="hover:text-zinc-500 transition-colors">
+                  Terms of Service
+                </a>
+                <a href="#" className="hover:text-zinc-500 transition-colors">
+                  Privacy Policy
+                </a>
               </div>
             </div>
           </div>

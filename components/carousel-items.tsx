@@ -27,7 +27,7 @@ export default function CarouselItems() {
         {carouselImages.map((image, index) => (
           <CarouselItem
             key={index}
-            className="md:basis-1/2 2xl:basis-1/4 3xl:basis-1/5"
+            className="md:basis-1/4 2xl:basis-1/5 3xl:basis-1/6"
           >
             <div className="p-1">
               <Image

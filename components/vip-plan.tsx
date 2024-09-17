@@ -6,7 +6,7 @@ export default function VipPlan() {
   const data: VipPlanType[] = vipPlan;
 
   return (
-    <section className="w-full p-8 rounded-3xl bg-zinc-800">
+    <section className="w-full p-8 rounded-3xl bg-zinc-900 shadow-2xl">
       {data.map((plan) => (
         <div key={plan.label} className="flex flex-col justify-between h-full">
           <div className="flex flex-col gap-5">
@@ -16,17 +16,17 @@ export default function VipPlan() {
                 {plan.periodType}
               </small>
             </p>
-            <h2 className="text-white scroll-m-20 text-3xl font-semibold tracking-tight">
+            <h2 className="text-white text-4xl font-semibold tracking-tight">
               {plan.label}
             </h2>
           </div>
           <div className="flex flex-col gap-5">
             <div className="flex gap-16">
               <div className="flex flex-col gap-2">
-                <h3 className="text-white scroll-m-20 text-3xl font-semibold tracking-tight">
+                <h3 className="text-white text-3xl font-semibold tracking-tight">
                   ${plan.price}
                 </h3>
-                <Button className="text-base bg-white text-black rounded-full py-7 px-7 hover:bg-zinc-100">
+                <Button className="text-base bg-white text-black rounded-full p-7 hover:bg-zinc-100">
                   Book a call
                 </Button>
               </div>

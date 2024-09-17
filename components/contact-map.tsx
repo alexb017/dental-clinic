@@ -17,6 +17,9 @@ export default function ContactMap() {
       zoom: 9,
     });
 
+    // Disable map scrolling
+    map.scrollZoom.disable();
+
     // Add navigation control (the +/- zoom buttons)
     map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 

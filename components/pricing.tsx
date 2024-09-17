@@ -1,6 +1,6 @@
-import { Button } from './ui/button';
 import VipPlan from './vip-plan';
 import PricingList from './pricing-list';
+import PriceQuestion from './price-question';
 
 export default function Pricing() {
   return (
@@ -15,14 +15,7 @@ export default function Pricing() {
           <PricingList />
           <VipPlan />
         </div>
-        <div className="flex items-center justify-between bg-white rounded-3xl p-8">
-          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-            Have a question about our pricing?
-          </h4>
-          <Button className="text-base rounded-full text-black border bg-transparent hover:bg-zinc-50">
-            Email us
-          </Button>
-        </div>
+        <PriceQuestion />
       </div>
     </section>
   );

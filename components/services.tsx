@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { Button } from './ui/button';
-import { Info } from 'lucide-react';
 import ServicesList from './services-list';
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import {
+  ArrowTopRightOnSquareIcon,
+  InformationCircleIcon,
+} from '@heroicons/react/24/outline';
 
 export default function Services() {
   return (
@@ -18,7 +20,7 @@ export default function Services() {
       </div>
       <ServicesList />
       <div className="flex items-center gap-2 px-8">
-        <Info className="h-4 w-4 inline-block text-zinc-500" />
+        <InformationCircleIcon className="h-4 w-4 inline-block text-zinc-500" />
         <p className="text-zinc-500">
           You don&apos;t find any service?{' '}
           <Link
