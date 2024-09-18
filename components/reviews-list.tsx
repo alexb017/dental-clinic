@@ -2,6 +2,7 @@ import { reviews } from '@/lib/placeholder-data';
 import Image from 'next/image';
 import { CheckBadgeIcon } from '@heroicons/react/24/solid';
 import { Review } from '@/lib/types';
+import { Avatar, AvatarImage } from './ui/avatar';
 
 export default function ReviewsList() {
   const data: Review[] = reviews;
@@ -23,15 +24,9 @@ export default function ReviewsList() {
             className="flex flex-col gap-5 p-5 rounded-3xl bg-white"
           >
             <div className="flex items-center gap-3">
-              <div className="relative flex w-11 h-11">
-                <Image
-                  src={review.avatar}
-                  alt={review.name}
-                  sizes="44px 44px"
-                  fill
-                  className="rounded-full object-cover"
-                />
-              </div>
+              <Avatar>
+                <AvatarImage src={review.avatar} alt={review.name} />
+              </Avatar>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
                   <h4 className="text-xl font-semibold tracking-tighter leading-none">
@@ -57,15 +52,9 @@ export default function ReviewsList() {
             className="flex flex-col gap-5 p-5 rounded-3xl bg-white"
           >
             <div className="flex items-center gap-3">
-              <div className="relative flex w-11 h-11">
-                <Image
-                  src={review.avatar}
-                  alt={review.name}
-                  sizes="44px 44px"
-                  fill
-                  className="rounded-full object-cover"
-                />
-              </div>
+              <Avatar>
+                <AvatarImage src={review.avatar} alt={review.name} />
+              </Avatar>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
                   <h4 className="text-xl font-semibold tracking-tighter leading-none">
@@ -91,15 +80,9 @@ export default function ReviewsList() {
             className="flex flex-col gap-5 p-5 rounded-3xl bg-white"
           >
             <div className="flex items-center gap-3">
-              <div className="relative flex w-11 h-11">
-                <Image
-                  src={review.avatar}
-                  alt={review.name}
-                  sizes="44px 44px"
-                  fill
-                  className="rounded-full object-cover"
-                />
-              </div>
+              <Avatar>
+                <AvatarImage src={review.avatar} alt={review.name} />
+              </Avatar>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
                   <h4 className="text-xl font-semibold tracking-tighter leading-none">
