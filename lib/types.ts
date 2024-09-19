@@ -23,6 +23,8 @@ export type Review = {
 export type Service = {
   label: string;
   content: string;
+  price: number;
+  state: string;
 };
 
 export type VipPlanType = {

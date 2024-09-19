@@ -10,7 +10,6 @@ export default function Header() {
             'url(/images/close-up-dentist-instruments-large.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          marginTop: '56px',
         }}
       ></div>
       <div className="max-w-[1080px] pt-8">
