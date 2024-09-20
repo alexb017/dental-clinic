@@ -15,18 +15,20 @@ export default function CardServicesList() {
   return (
     <div className="flex flex-col gap-5">
       {data.map((service) => (
-        <Card key={service.label} className="rounded-3xl">
-          <CardHeader>
+        <Card
+          key={service.label}
+          className="rounded-3xl border-none shadow-none"
+        >
+          <CardHeader className="p-8">
             <CardTitle className="text-3xl">{service.label}</CardTitle>
-            <CardDescription className="text-2xl font-semibold tracking-tight text-orange-500">
-              <small className="text-sm font-medium leading-none">$</small>
-              {service.price}
+            <CardDescription className="text-2xl font-semibold tracking-tighter text-orange-500">
+              ${service.price}
               <small className="text-sm font-medium leading-none">
                 / {service.state}
               </small>
             </CardDescription>
           </CardHeader>
-          <CardContent className="text-xl text-zinc-500">
+          <CardContent className="text-xl text-zinc-500 p-8 pt-0">
             {service.content}
           </CardContent>
         </Card>
