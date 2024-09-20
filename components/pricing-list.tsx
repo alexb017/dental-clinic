@@ -30,7 +30,10 @@ export default function PricingList() {
           {data.map((pricing) => (
             <TableRow key={pricing.label}>
               <TableCell>{pricing.label}</TableCell>
-              <TableCell className="text-right">${pricing.price}</TableCell>
+              <TableCell className="text-right">
+                ${pricing.price}
+                <small className="text-sm">/{pricing.state}</small>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

@@ -6,6 +6,7 @@ export type Links = {
 export type Pricing = {
   label: string;
   price: number;
+  state: string;
 };
 
 export type ImageType = {
