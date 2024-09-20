@@ -28,7 +28,7 @@ export default function CardServicesList() {
               </small>
             </CardDescription>
           </CardHeader>
-          <CardContent className="text-xl text-zinc-500 p-8 pt-0">
+          <CardContent className="text-base text-zinc-500 p-8 pt-0">
             {service.content}
           </CardContent>
         </Card>
