@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { links } from '@/lib/placeholder-data';
 import { Links } from '@/lib/types';
 import LogoName from './logo-name';
+import NavigateToForm from './navigate-to-form';
 
 export default function Footer() {
   const data: Links[] = links;
@@ -53,9 +54,7 @@ export default function Footer() {
                   We understand the importance of dental care and oral hygiene.
                 </h4>
                 <div className="flex gap-2">
-                  <Button className="text-base rounded-full">
-                    Book a call
-                  </Button>
+                  <NavigateToForm styleButton="dark" />
                   <Button className="text-base rounded-full text-black border bg-transparent hover:bg-zinc-50">
                     Email us
                   </Button>

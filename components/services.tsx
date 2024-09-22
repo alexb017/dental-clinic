@@ -5,6 +5,7 @@ import {
   ArrowTopRightOnSquareIcon,
   InformationCircleIcon,
 } from '@heroicons/react/24/outline';
+import NavigateToForm from './navigate-to-form';
 
 export default function Services() {
   return (
@@ -14,9 +15,7 @@ export default function Services() {
           We&apos;d love to welcome <br></br>{' '}
           <span className="text-zinc-500">you to our practice.</span>
         </h1>
-        <Button className="self-end text-base rounded-full p-7 bg-zinc-50 border text-black hover:bg-white transition-colors">
-          Book a call
-        </Button>
+        <NavigateToForm styleButton="large" className="self-end" />
       </div>
       <ServicesList />
       <div className="flex items-center gap-2 px-8">

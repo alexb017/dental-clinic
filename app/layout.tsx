@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import { AppProvider } from './AppContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-zinc-100`}>
-        <Navbar />
-        <div className="flex flex-col items-center justify-center">
-          {children}
-        </div>
-        <Footer />
+        <AppProvider>
+          <Navbar />
+          <div className="flex flex-col items-center justify-center">
+            {children}
+          </div>
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );

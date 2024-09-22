@@ -1,8 +1,8 @@
-import { Button } from './ui/button';
 import Link from 'next/link';
 import { links } from '@/lib/placeholder-data';
 import { Links } from '@/lib/types';
 import LogoName from './logo-name';
+import NavigateToForm from './navigate-to-form';
 
 export default function Navbar() {
   const data: Links[] = links;
@@ -23,9 +23,7 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-5">
-          <Button className="text-base rounded-full bg-orange-500 hover:bg-zinc-900 transition-colors">
-            Book a call
-          </Button>
+          <NavigateToForm />
         </div>
       </div>
     </nav>

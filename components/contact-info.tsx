@@ -1,3 +1,5 @@
+'use client';
+
 import {
   EnvelopeIcon,
   PhoneIcon,
@@ -5,8 +7,11 @@ import {
 } from '@heroicons/react/24/outline';
 import FacebookOutlineIcon from './icons/facebook-outline';
 import ContactForm from './contact-form';
+import { useAppContext } from '@/app/AppContext';
 
 export default function ContactInfo() {
+  const { appointmentRef } = useAppContext();
+
   return (
     <section className="bg-white rounded-3xl w-1/2 p-8">
       <div className="flex flex-col gap-8">
@@ -42,7 +47,7 @@ export default function ContactInfo() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4" ref={appointmentRef}>
           <h2 className="text-3xl font-semibold tracking-tight">
             Make an <br></br> <span className="text-zinc-500">appointment</span>
           </h2>
