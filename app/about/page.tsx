@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -22,10 +22,13 @@ export default function Page() {
           <h2 className="text-3xl font-semibold tracking-tight">
             We are here to help you with any dental issue you may have.
           </h2>
-          <Button className="text-base rounded-full bg-transparent border border-zinc-500 text-black hover:bg-zinc-200">
+          <Link
+            href="/contact"
+            className="flex items-center gap-1 h-10 py-2 px-4 text-base rounded-full bg-transparent border border-zinc-500 text-black hover:bg-zinc-50"
+          >
             Contact Us
             <ArrowUpRightIcon className="w-4 h-4 ml-2" />
-          </Button>
+          </Link>
         </div>
         <div className="flex flex-col gap-5 w-3/5">
           <p>

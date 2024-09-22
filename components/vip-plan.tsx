@@ -1,6 +1,6 @@
-import { Button } from './ui/button';
 import { vipPlan } from '@/lib/placeholder-data';
 import { VipPlanType } from '@/lib/types';
+import NavigateToForm from './navigate-to-form';
 
 export default function VipPlan() {
   const data: VipPlanType[] = vipPlan;
@@ -26,9 +26,7 @@ export default function VipPlan() {
                 <h3 className="text-white text-3xl font-semibold tracking-tight">
                   ${plan.price}
                 </h3>
-                <Button className="text-base bg-white text-black rounded-full p-7 hover:bg-zinc-100">
-                  Book a call
-                </Button>
+                <NavigateToForm styleButton="large" />
               </div>
               <p className="text-zinc-300 italic p-4 border border-zinc-700 rounded-2xl self-end">
                 {plan.discount}
