@@ -21,7 +21,7 @@ export default function CardServicesList() {
         >
           <CardHeader className="p-8">
             <CardTitle className="text-3xl">{service.label}</CardTitle>
-            <CardDescription className="text-2xl font-semibold tracking-tighter text-orange-500">
+            <CardDescription className="text-3xl font-semibold tracking-tight text-orange-500">
               ${service.price}
               <small className="text-sm font-medium leading-none">
                 / {service.state}
