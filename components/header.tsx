@@ -12,7 +12,7 @@ export default function Header() {
         }}
       ></div>
       <div className="max-w-[1080px] pt-8">
-        <h1 className="text-4xl text-orange-500 text-center font-extrabold tracking-tighter xl:text-6xl">
+        <h1 className="text-6xl text-orange-500 text-center font-extrabold tracking-tighter">
           We understand the importance of dental care and oral hygiene.
         </h1>
       </div>

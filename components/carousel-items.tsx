@@ -21,7 +21,7 @@ export default function CarouselItems() {
   return (
     <Carousel
       opts={{ align: 'start' }}
-      className={`relative w-screen md:-translate-x-48 3xl:-translate-x-96 ${before}`}
+      className={`relative w-screen md:-translate-x-5 xl:-translate-x-48 3xl:-translate-x-96 ${before}`}
     >
       <CarouselContent className="carousel-content">
         {carouselImages.map((image, index) => (
