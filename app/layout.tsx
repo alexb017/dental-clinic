@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import { AppProvider } from './AppContext';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
             {children}
           </div>
           <Footer />
+          <Toaster position="bottom-right" reverseOrder={false} />
         </AppProvider>
       </body>
     </html>

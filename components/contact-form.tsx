@@ -17,6 +17,8 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
+import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
 const contactFormSchema = z.object({
   name: z
@@ -41,9 +43,38 @@ const contactFormSchema = z.object({
     }),
 });
 
+const toastSuccess = (t: any) => (
+  <div
+    className={`${
+      t.visible ? 'animate-enter' : 'animate-leave'
+    } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+  >
+    <div className="flex-1 w-0 p-4">
+      <div className="flex items-start">
+        <div className="flex-shrink-0 pt-0.5">
+          <CheckCircleIcon className="h-6 w-6 text-green-400" />
+        </div>
+        <div className="ml-3 flex-1">
+          <p className="text-sm font-medium">Message sent successfully!</p>
+          <p className="mt-1 text-sm text-gray-500">
+            You will receive an email confirmation shortly.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div className="flex border-l border-gray-200">
+      <button
+        onClick={() => toast.dismiss(t.id)}
+        className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-orange-600 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+);
+
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isMessageSent, setIsMessageSent] = useState<string | null>(null);
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -58,7 +89,6 @@ export default function ContactForm() {
   // https://www.emailjs.com/docs/examples/reactjs/
   function onSubmit(data: z.infer<typeof contactFormSchema>) {
     setIsSubmitting(true);
-    setIsMessageSent(null); // Reset message sent state
 
     emailjs
       .send(
@@ -69,23 +99,13 @@ export default function ContactForm() {
       )
       .then(
         (result) => {
-          setIsMessageSent('Message sent successfully!');
+          toast.custom(toastSuccess);
           form.reset();
           setIsSubmitting(false);
-
-          // Reset message sent state after 2 seconds
-          setTimeout(() => {
-            setIsMessageSent(null);
-          }, 2000);
         },
         (error) => {
-          setIsMessageSent('Message failed to send. Please try again.');
+          toast.error('Message failed to send. Please try again.');
           setIsSubmitting(false);
-
-          // Reset message sent state after 2 seconds
-          setTimeout(() => {
-            setIsMessageSent(null);
-          }, 2000);
         }
       );
   }
@@ -145,14 +165,9 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <div className="flex items-center gap-5">
-          <Button type="submit" className="rounded-full">
-            {isSubmitting ? 'Sending...' : 'Send message'}
-          </Button>
-          {isMessageSent && (
-            <p className="text-sm text-muted-foreground">{isMessageSent}</p>
-          )}
-        </div>
+        <Button type="submit" className="rounded-full">
+          {isSubmitting ? 'Sending...' : 'Send message'}
+        </Button>
       </form>
     </Form>
   );
