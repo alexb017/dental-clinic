@@ -4,6 +4,7 @@ import { Links } from '@/lib/types';
 import LogoName from './logo-name';
 import NavigateToForm from './navigate-to-form';
 import NavbarMenuMobile from './navbar-menu-mobile';
+import { Suspense } from 'react';
 
 export default function Navbar() {
   const data: Links[] = links;
@@ -12,7 +13,9 @@ export default function Navbar() {
     <nav className="fixed z-50 w-full h-14 top-0 flex justify-center bg-zinc-100/50 backdrop-blur-xl">
       <div className="flex items-center max-w-[1080px] w-full h-full px-5">
         <div className="flex items-center justify-between w-full md:hidden">
-          <NavbarMenuMobile />
+          <Suspense fallback={null}>
+            <NavbarMenuMobile />
+          </Suspense>
           <LogoName />
           <div className="w-6"></div>
         </div>
