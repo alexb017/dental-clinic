@@ -9,7 +9,7 @@ export default function Contact() {
           Get in touch <br></br> <span className="text-zinc-500">with us.</span>
         </h1>
       </div>
-      <div className="flex gap-5">
+      <div className="flex flex-col gap-5 lg:flex-row">
         <ContactInfo />
         <ContactMap />
       </div>

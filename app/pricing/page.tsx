@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div className="flex flex-col justify-center gap-10 my-20 w-full max-w-[640px] px-5">
       <div className="flex flex-col items-center gap-5">
-        <h1 className="text-4xl font-extrabold tracking-tighter lg:text-6xl text-orange-500">
+        <h1 className="text-5xl font-extrabold tracking-tighter md:text-6xl text-orange-500">
           Pricing
         </h1>
         {/* A description about our dental pricing */}

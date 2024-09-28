@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center gap-20 my-20 w-full max-w-[1080px] px-5">
       <div className="flex flex-col items-center gap-5 max-w-[640px]">
-        <h1 className="text-4xl font-extrabold tracking-tighter lg:text-6xl text-orange-500">
+        <h1 className="text-5xl font-extrabold tracking-tighter md:text-6xl text-orange-500">
           About Us
         </h1>
         {/* A description about dental team */}
@@ -17,8 +17,8 @@ export default function Page() {
         </h4>
       </div>
       {/* About our team */}
-      <div className="flex gap-20 pt-20 border-t border-zinc-300">
-        <div className="flex flex-col items-start gap-5 w-2/5">
+      <div className="flex flex-col md:flex-row gap-20 pt-20 border-t border-zinc-300">
+        <div className="flex flex-col items-start gap-5 md:w-2/5">
           <h2 className="text-3xl font-semibold tracking-tight">
             We are here to help you with any dental issue you may have.
           </h2>
@@ -30,7 +30,7 @@ export default function Page() {
             <ArrowUpRightIcon className="w-4 h-4 ml-2" />
           </Link>
         </div>
-        <div className="flex flex-col gap-5 w-3/5">
+        <div className="flex flex-col gap-5 md:w-3/5">
           <p>
             Our team of professionals is dedicated to providing you with the
             best dental care in a comfortable and relaxing environment. We offer
@@ -51,8 +51,8 @@ export default function Page() {
           </p>
         </div>
       </div>
-      <div className="flex gap-20 pt-20 border-t border-zinc-300">
-        <div className="flex flex-col items-start gap-5 w-2/5">
+      <div className="flex flex-col md:flex-row gap-20 pt-20 border-t border-zinc-300">
+        <div className="flex flex-col items-start gap-5 md:w-2/5">
           <small>Our story</small>
           <h2 className="text-3xl font-semibold tracking-tight">
             Our goal is to help you achieve and maintain a healthy smile for
@@ -65,7 +65,7 @@ export default function Page() {
             they receive.
           </p>
         </div>
-        <div className="w-3/5">
+        <div className="w-full md:w-3/5">
           <Image
             src="/images/1043.jpg"
             alt="About Us"

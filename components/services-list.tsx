@@ -15,7 +15,7 @@ export default function ServicesList() {
   const nextFourElements = data.slice(4, 8);
 
   return (
-    <div className="flex flex-row gap-5">
+    <div className="flex flex-col md:flex-row gap-5">
       <div className="flex flex-col gap-5 w-full">
         {firstFourElements.map((service) => (
           <Accordion

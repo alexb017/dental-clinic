@@ -16,7 +16,7 @@ export default function ReviewsList() {
   const before = `before:content-[''] before:absolute before:inset-0 before:z-[1] before:bg-gradient-to-t before:from-zinc-100 before:to-transparent before:via-transparent before:from-0% before:via-25% before:to-50%`;
 
   return (
-    <section className={`relative flex gap-5 ${before}`}>
+    <section className={`relative flex flex-col md:flex-row gap-5 ${before}`}>
       <div className="flex flex-col gap-5 w-full">
         {first.map((review) => (
           <div

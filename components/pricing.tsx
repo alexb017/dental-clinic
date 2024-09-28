@@ -11,7 +11,7 @@ export default function Pricing() {
         </h1>
       </div>
       <div className="flex flex-col gap-5">
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-col lg:flex-row gap-5">
           <PricingList />
           <VipPlan />
         </div>

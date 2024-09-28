@@ -13,7 +13,7 @@ export default function ContactInfo() {
   const { appointmentRef } = useAppContext();
 
   return (
-    <section className="bg-white rounded-3xl w-1/2 p-8">
+    <section className="bg-white rounded-3xl w-full lg:w-1/2 p-8">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h2 className="text-3xl font-semibold tracking-tight">
@@ -39,7 +39,7 @@ export default function ContactInfo() {
             </a>
             <div className="flex items-center gap-2 font-semibold">
               <PhoneIcon className="h-5" />
-              +123 456 7890
+              +1 (234) 567-890
             </div>
             <div className="flex items-center gap-2 font-semibold">
               <MapPinIcon className="h-5" />

@@ -9,9 +9,11 @@ import clsx from 'clsx';
 export default function NavigateToForm({
   styleButton,
   className,
+  setIsDialogOpen,
 }: {
   styleButton?: 'default' | 'dark' | 'large';
   className?: string;
+  setIsDialogOpen?: (value: boolean) => void;
 }) {
   const { appointmentRef } = useAppContext();
   const router = useRouter();
@@ -45,7 +47,12 @@ export default function NavigateToForm({
 
   return (
     <Button
-      onClick={handleScrollToAppointment}
+      onClick={() => {
+        if (setIsDialogOpen) {
+          setIsDialogOpen(false);
+        }
+        handleScrollToAppointment();
+      }}
       className={clsx(
         'text-base rounded-full bg-orange-500 hover:bg-zinc-900 transition-colors',
         {

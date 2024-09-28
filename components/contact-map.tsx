@@ -32,7 +32,7 @@ export default function ContactMap() {
   }, []);
 
   return (
-    <section className="rounded-3xl w-1/2">
+    <section className="rounded-3xl w-full h-96 lg:w-1/2 lg:h-auto">
       <div
         ref={mapContainerRef}
         style={{ width: '100%', height: '100%', borderRadius: 'inherit' }}

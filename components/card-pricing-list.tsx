@@ -19,8 +19,8 @@ export default function CardPricingList() {
           key={pricing.label}
           className="rounded-3xl border-none shadow-none"
         >
-          <CardHeader className="flex-row items-center h-full p-8">
-            <CardTitle className="text-3xl w-1/2 border-r mr-8 tracking-tighter">
+          <CardHeader className="flex-col md:flex-row md:items-center h-full p-8 gap-2 md:gap-0">
+            <CardTitle className="text-3xl w-full md:w-1/2 md:border-r md:mr-8 tracking-tighter">
               {pricing.label}
             </CardTitle>
             <CardDescription

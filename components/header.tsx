@@ -11,8 +11,8 @@ export default function Header() {
           backgroundPosition: 'center',
         }}
       ></div>
-      <div className="max-w-[1080px] pt-8">
-        <h1 className="text-6xl text-orange-500 text-center font-extrabold tracking-tighter">
+      <div className="max-w-[1080px] pt-8 px-5">
+        <h1 className="text-4xl md:text-6xl text-orange-500 text-center font-extrabold tracking-tighter">
           We understand the importance of dental care and oral hygiene.
         </h1>
       </div>

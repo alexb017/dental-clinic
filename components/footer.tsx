@@ -15,7 +15,7 @@ export default function Footer() {
     <section className="flex justify-center w-full pt-20 pb-8 bg-white">
       <div className="max-w-[1080px] w-full px-5">
         <div className="flex flex-col gap-8">
-          <div className="flex justify-between">
+          <div className="flex flex-col gap-8 md:flex-row md:justify-between">
             <div className="flex flex-col gap-8">
               <LogoName />
               <div className="flex flex-col gap-2">
@@ -37,7 +37,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-20">
+            <div className="flex flex-col items-start gap-8 md:flex-row lg:gap-20">
               <div className="flex flex-col gap-2">
                 {data.map((link) => (
                   <Link
@@ -63,8 +63,8 @@ export default function Footer() {
             </div>
           </div>
           <div className="border-t pt-8">
-            <div className="flex justify-between">
-              <div className="flex gap-5">
+            <div className="flex flex-col gap-2 md:flex-row md:justify-between md:gap-0">
+              <div className="flex gap-5 order-1 md:order-none">
                 <p>&copy; 2024 Dental Clinic Inc. All rights reserved.</p>
               </div>
               <div className="flex gap-5">

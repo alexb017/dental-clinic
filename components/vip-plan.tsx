@@ -8,7 +8,10 @@ export default function VipPlan() {
   return (
     <section className="w-full p-8 rounded-3xl bg-zinc-950 shadow-2xl">
       {data.map((plan) => (
-        <div key={plan.label} className="flex flex-col justify-between h-full">
+        <div
+          key={plan.label}
+          className="flex flex-col justify-between h-full gap-5"
+        >
           <div className="flex flex-col gap-5">
             <p className="text-white">
               {plan.period}{' '}
@@ -21,8 +24,8 @@ export default function VipPlan() {
             </h2>
           </div>
           <div className="flex flex-col gap-5">
-            <div className="flex gap-16">
-              <div className="flex flex-col gap-2">
+            <div className="flex flex-col md:flex-row justify-between gap-5 lg:gap-20">
+              <div className="flex flex-col gap-2 justify-end">
                 <h3 className="text-white text-4xl font-semibold tracking-tight">
                   ${plan.price}
                 </h3>
