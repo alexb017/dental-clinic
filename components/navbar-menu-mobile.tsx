@@ -36,11 +36,9 @@ export default function NavbarMenuMobile() {
           <Bars3Icon className="w-6 h-6" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="flex flex-col items-center justify-center gap-20 top-0 right-0 bottom-0 left-0 w-full h-full border-none bg-transparent translate-x-0 translate-y-0 data-[state=closed]:slide-out-to-top-0 data-[state=closed]:slide-out-to-left-0">
+      <DialogContent className="flex flex-col items-center justify-center gap-20 top-0 right-0 bottom-0 left-0 w-full h-full border-none bg-transparent translate-x-0 translate-y-0 shadow-none data-[state=closed]:slide-out-to-left-0 data-[state=closed]:slide-out-to-top-0 data-[state=open]:slide-in-from-left-0 data-[state=open]:slide-in-from-top-[20px]">
         <DialogHeader className="items-center">
-          <DialogDescription className="text-white">
-            Welcome to our clinic.
-          </DialogDescription>
+          <DialogDescription>Welcome to our clinic.</DialogDescription>
           <DialogTitle>
             <LogoName />
           </DialogTitle>
@@ -51,7 +49,7 @@ export default function NavbarMenuMobile() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-4xl font-bold text-white hover:text-orange-500 transition-colors"
+                className="text-4xl text-black hover:text-orange-500 transition-colors"
               >
                 {link.label}
               </Link>
@@ -60,14 +58,14 @@ export default function NavbarMenuMobile() {
           <NavigateToForm setIsDialogOpen={setIsDialogOpen} />
         </div>
         <div className="flex items-center gap-2">
-          <PhoneIcon className="w-6 h-6 text-white" />
-          <h3 className="text-2xl font-semibold tracking-tight text-white">
+          <PhoneIcon className="w-6 h-6 text-black" />
+          <h3 className="text-2xl tracking-tight text-black">
             +1 (234) 567-890
           </h3>
         </div>
         <DialogClose asChild>
           <Button className="absolute top-5 left-5 flex w-6 h-6 bg-transparent border-none hover:bg-transparent p-0">
-            <XMarkIcon className="w-6 h-6 text-white" />
+            <XMarkIcon className="w-6 h-6 text-black" />
           </Button>
         </DialogClose>
       </DialogContent>

@@ -23,13 +23,13 @@ export default function Footer() {
                 <a href="#">+123 456 7890</a>
                 <div className="flex gap-2">
                   <a
-                    className="flex p-1 rounded-xl border bg-zinc-200 hover:bg-zinc-300 transition-colors"
+                    className="flex p-1 rounded-xl border hover:bg-zinc-100 transition-colors"
                     href="#"
                   >
                     <FacebookFillIcon className="h-8" />
                   </a>
                   <a
-                    className="flex p-1 rounded-xl border bg-zinc-200 hover:bg-zinc-300 transition-colors"
+                    className="flex p-1 rounded-xl border hover:bg-zinc-100 transition-colors"
                     href="#"
                   >
                     <InstagramFillIcon className="h-8" />

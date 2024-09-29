@@ -21,12 +21,12 @@ export default function Navbar() {
         </div>
         <div className="hidden md:flex items-center justify-between w-full">
           <LogoName />
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-8">
             {data.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="font-medium text-black hover:text-orange-500 transition-colors"
+                className="text-black hover:text-orange-500 transition-colors"
               >
                 {link.label}
               </Link>
