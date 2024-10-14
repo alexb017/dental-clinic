@@ -89,8 +89,14 @@ const config: Config = {
           },
         },
         enter: {
-          '0%': { transform: 'scale(0.9)', opacity: '0' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
+          from: { transform: 'translateY(-20px)', opacity: '0' },
+          '0%': { transform: 'translateY(-20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        },
+        exit: {
+          from: { transform: 'translateY(0px)', opacity: '1' },
+          '0%': { transform: 'translateY(0px)', opacity: '1' },
+          '100%': { transform: 'translateY(-20px)', opacity: '0' },
         },
         leave: {
           '0%': { transform: 'scale(1)', opacity: '1' },

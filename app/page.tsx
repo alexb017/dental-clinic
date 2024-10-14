@@ -7,7 +7,7 @@ import Contact from '@/components/contact';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center gap-20 mt-14 mb-20 w-full overflow-hidden">
+    <main className="flex flex-col items-center justify-center gap-20 mt-16 mb-20 w-full overflow-hidden">
       <Header />
       <Services />
       <Pricing />
