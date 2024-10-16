@@ -2,6 +2,11 @@ import Image from 'next/image';
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'About Us | Dental Clinic',
+  description: 'Learn more about us.',
+};
+
 export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center gap-20 my-20 w-full max-w-[1080px] px-5">
@@ -9,14 +14,12 @@ export default function Page() {
         <h1 className="text-5xl font-extrabold tracking-tighter md:text-6xl text-orange-500">
           About Us
         </h1>
-        {/* A description about dental team */}
         <h4 className="text-xl text-center text-zinc-500">
           Our team of professionals is here to help you with any dental issue
           you may have. We offer a wide range of services to help you maintain
           your oral health.
         </h4>
       </div>
-      {/* About our team */}
       <div className="flex flex-col md:flex-row gap-20 pt-20 border-t border-zinc-300">
         <div className="flex flex-col items-start gap-5 md:w-2/5">
           <h2 className="text-3xl font-semibold tracking-tight">

@@ -1,5 +1,10 @@
 import CardServicesList from '@/components/card-services-list';
 
+export const metadata = {
+  title: 'Services | Dental Clinic',
+  description: 'A list of dental services.',
+};
+
 export default function Page() {
   return (
     <div className="flex flex-col justify-center gap-10 my-20 w-full max-w-[640px] px-5">
@@ -7,7 +12,6 @@ export default function Page() {
         <h1 className="text-5xl font-extrabold tracking-tighter md:text-6xl text-orange-500">
           Services
         </h1>
-        {/* A description about dental servicies */}
         <h4 className="text-xl text-center text-zinc-500">
           Our services are designed to help you with your dental needs. We offer
           a wide range of services to help you maintain your oral health. Our
@@ -15,7 +19,6 @@ export default function Page() {
           may have.
         </h4>
       </div>
-      {/* A list of dental services */}
       <CardServicesList />
     </div>
   );

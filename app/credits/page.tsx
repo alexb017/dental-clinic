@@ -1,5 +1,10 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
+export const metadata = {
+  title: 'Credits | Dental Clinic',
+  description: 'A list of credits.',
+};
+
 export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center gap-20 my-20 w-full max-w-[1080px] px-5">
